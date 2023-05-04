@@ -1,0 +1,16 @@
+{
+  "name": "m295-projekt",
+  "version": "1.0.0",
+  "description": "Dies ist das Projekt von Sami Hindi für das Modul 295, durchgeführt im ZLI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "node.js",
+    "backend",
+    "projekt"
+  ],
+  "author": "Sami Hindi",
+  "license": "MIT"
+}
