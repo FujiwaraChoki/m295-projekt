@@ -10,8 +10,8 @@ app.use(express.json());
 // Importierte Routes mit der App verbinden
 app.use('/users', userRoutes);
 
-// Lege den Port fest
-const port = 3000 || process.env.PORT;
+// Port definieren
+const port = (process.argv[2] ? parseInt(process.argv[2]) : 3000) || process.env.PORT;
 
 // Starte den Server
 app.listen(port, () => {
