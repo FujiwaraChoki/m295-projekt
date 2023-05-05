@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
-const { generateRandomId } = require('./utils');
+
+const { login, verify, logout, four_o_four } = require('./controllers/authController');
 
 /*
 The List of Tasks was generated with the help of ChatGPT:
@@ -33,111 +34,13 @@ app.use('/tasks', tasksRoutes);
 const port = (process.argv[2] ? parseInt(process.argv[2]) : 5001) || process.env.PORT;
 
 // Endpoint for logging in
-app.post('/login', async (req, res) => {
-    try {
-        const { email, password } = req.body;
-        if (!email || !password) {
-            return res.status(400).json({
-                success: false,
-                message: 'Please provide an email and password'
-            });
-        }
-
-        if (password !== 'm295') {
-            return res.status(401).json({
-                success: false,
-                message: 'Invalid password'
-            });
-        }
-
-        const sessionID = generateRandomId();
-
-        req.session.sessionID = sessionID;
-
-        return res.status(200).json({
-            success: true,
-            session_id: sessionID,
-            message: 'Login successful'
-        });
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        });
-    }
-});
-
+app.post('/login', login);
 
 // Endpoint for verifying the session
-app.get('/verify', async (req, res) => {
-    try {
-
-        const sessionID = await req.session.sessionID;
-        console.log(sessionID);
-
-        if (!sessionID) {
-            return res.status(403).json({
-                success: false,
-                message: 'Unauthorized'
-            });
-        }
-
-        return res.status(200).json({
-            success: true,
-            message: 'Authorized',
-            session_id: sessionID
-        });
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        });
-    }
-});
+app.get('/verify', verify);
 
 // Endpoint for logging out
-app.delete('/logout', (req, res) => {
-    try {
-        const { sessionID } = req.session;
-
-        if (!sessionID) {
-            return res.status(401).json({
-                success: false,
-                message: 'Unauthorized'
-            });
-        }
-
-        req.session.sessionID = null;
-
-        return res.sendStatus(204);
-
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        });
-    }
-});
-
-// Catch all 404 errors
-app.use((req, res, next) => {
-    try {
-        res.status(404).json({
-            success: false,
-            message: 'Page not found'
-        });
-
-    } catch (err) {
-        console.error(err);
-        return res.status(500).json({
-            success: false,
-            message: 'Internal server error'
-        });
-    }
-});
+app.delete('/logout', logout);
 
 // Start the server
 app.listen(port, () => {
