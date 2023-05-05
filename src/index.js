@@ -65,10 +65,9 @@ app.get('/verify', async (req, res) => {
     console.log(sessionID);
 
     if (!sessionID) {
-        return res.status(401).json({
+        return res.status(403).json({
             success: false,
-            message: 'Unauthorized',
-            session_id: sessionID
+            message: 'Unauthorized'
         });
     }
 

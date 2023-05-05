@@ -17,7 +17,7 @@ router.use(express.json());
 
 router.get('/', (req, res) => {
     if (!req.session.sessionID) {
-        return res.status(401).json({
+        return res.status(403).json({
             success: false,
             message: 'Unauthorized'
         });
@@ -31,7 +31,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     if (!req.session.sessionID) {
-        return res.status(401).json({
+        return res.status(403).json({
             success: false,
             message: 'Unauthorized'
         });
@@ -54,7 +54,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
     if (!req.session.sessionID) {
-        return res.status(401).json({
+        return res.status(403).json({
             success: false,
             message: 'Unauthorized'
         });
@@ -87,7 +87,7 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
     if (!req.session.sessionID) {
-        return res.status(401).json({
+        return res.status(403).json({
             success: false,
             message: 'Unauthorized'
         });
@@ -113,7 +113,7 @@ router.delete('/:id', (req, res) => {
 
 router.put('/:id', (req, res) => {
     if (!req.session.sessionID) {
-        return res.status(401).json({
+        return res.status(403).json({
             success: false,
             message: 'Unauthorized'
         });
