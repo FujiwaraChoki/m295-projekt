@@ -31,6 +31,7 @@ app.use(session({
 app.use('/tasks', tasksRoutes);
 
 // Define the port
+// eslint-disable-next-line no-undef
 const port = process?.argv[2] ? parseInt(process?.argv[2]) : 5001;
 
 // Endpoint for logging in
