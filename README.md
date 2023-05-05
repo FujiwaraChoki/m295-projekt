@@ -35,7 +35,9 @@ npm start
 
 Sie finden die Dokumentation auf [dieser Seite](https://m295.samihindi.com) oder im [Docs](docs/) folder.
 
-> **Hinweis:** Diese Dokumentation wurde mithilfe von **[Nextra](https://nextra.site)** erstellt.
+> **⚠️ Zur Dokumentation**: Ich habe so viele Files, dass ich es nicht in einem File namens `API.md` zusammenfassen konnte.
 
 ----
 © 2023 - Sami Hindi
+
+Die Webseit-Dokumentation wurde mithilfe von **[Nextra](https://nextra.site)** erstellt.
