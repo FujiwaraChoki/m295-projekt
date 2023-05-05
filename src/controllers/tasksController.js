@@ -197,7 +197,7 @@ const update = (req, res) => {
             message: 'Internal server error'
         });
     }
-}
+};
 
 module.exports = {
     getAll,
@@ -205,4 +205,4 @@ module.exports = {
     add,
     remove,
     update
-}
+};

@@ -28,7 +28,7 @@ const deleteTask = (tasks, id) => {
     updateFile(updatedTasks);
 
     return updatedTasks;
-}
+};
 
 const updateTask = (tasks, id, updatedTask) => {
     // Find the task with the given ID and replace it with the updated task
@@ -39,7 +39,7 @@ const updateTask = (tasks, id, updatedTask) => {
         description: updatedTask.description,
         due_date: updatedTask.due_date,
         creation_date: task.creation_date
-    }
+    };
 
     const updatedTasks = deleteTask(tasks, id);
     updatedTasks.push(newTask);

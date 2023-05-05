@@ -22,7 +22,7 @@ const logout = (req, res) => {
             message: 'Internal server error'
         });
     }
-}
+};
 
 const verify = (req, res) => {
     try {
@@ -48,7 +48,7 @@ const verify = (req, res) => {
             message: 'Internal server error'
         });
     }
-}
+};
 
 const login = async (req, res) => {
     try {
@@ -83,10 +83,10 @@ const login = async (req, res) => {
             message: 'Internal server error'
         });
     }
-}
+};
 
 module.exports = {
     login,
     verify,
     logout,
-}
+};
