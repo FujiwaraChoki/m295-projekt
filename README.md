@@ -17,7 +17,7 @@ Framework programmiert wurde.
 
 - **Sprache**: *JavaScript*
 - **Runtime**: *Node.js*
-- **Frameowkr**: *Express.js*
+- **Framework**: *Express.js*, *Express-Session*
 
 ## Installation
 
