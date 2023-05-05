@@ -46,7 +46,7 @@ const updateTask = (tasks, id, updatedTask) => {
 
     updateFile(updatedTasks);
 
-    return updatedTasks;
+    return newTask;
 };
 
 const getTaskById = (tasks, id) => {

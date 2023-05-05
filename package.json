@@ -15,7 +15,9 @@
   "author": "Sami Hindi",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "http": "^0.0.1-security",
     "node-fetch": "^3.3.1",
     "uuid": "^9.0.0"

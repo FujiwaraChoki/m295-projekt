@@ -79,6 +79,7 @@ router.delete('/:id', (req, res) => {
     return res.status(200).json({
         success: true,
         message: `Successfully deleted task with ID ${req.params.id}`,
+        task: task
     });
 });
 
@@ -108,11 +109,11 @@ router.put('/:id', (req, res) => {
         due_date: due_date
     };
 
-    const updatedTasks = updateTask(tasks, req.params.id, updatedTask);
+    updateTask(tasks, req.params.id, updatedTask);
 
     return res.status(200).json({
         success: true,
-        data: updatedTasks
+        data: updatedTask
     });
 });
 
