@@ -161,7 +161,7 @@ const update = (req, res) => {
             });
         }
 
-        const { title, description, due_date, state } = req.body;
+        const { title, description, due_date, status } = req.body;
 
         if (title === '') {
             return res.status(406).json({
@@ -170,10 +170,10 @@ const update = (req, res) => {
             });
         }
 
-        if (!description || !due_date || !state) {
+        if (!description || !due_date || !status) {
             return res.status(406).json({
                 success: false,
-                message: 'Please provide a description and a due date.'
+                message: 'Please provide a description, status and a due date.'
             });
         }
 
@@ -182,7 +182,7 @@ const update = (req, res) => {
             title: title,
             description: description,
             due_date: due_date,
-            state: state
+            status: status
         };
 
         updateTask(tasks, req.params.id, updatedTask);

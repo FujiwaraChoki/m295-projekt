@@ -1,4 +1,4 @@
-# Testing
+# **Testing**
 
 Getestet wurden die Endpoints mittels einem Tools namens [Hoppscotch](https://hoppscotch.io/).
 
@@ -6,34 +6,37 @@ Getestet wurden die Endpoints mittels einem Tools namens [Hoppscotch](https://ho
 
 Dies waren die Resultate:
 
-## /login
-
-URL: https://hopp.sh/r/OlyaygMnGoPp
+## **/login - POST**
 
 ![Login](https://i.imgur.com/DGKSyND.png)
 
-## /verify
+## **/verify - GET**
 
-URL: https://hopp.sh/r/d7aoeew5pVm3
+![Verify](https://i.imgur.com/d2Llc35.png)
 
-![Login](https://i.imgur.com/d2Llc35.png)
+## **/logout - DELETE**
 
-## /logout
+![Logout](https://i.imgur.com/oXPg07m.png)
 
-URL: https://hopp.sh/r/d7aoeew5pVm3
+## **/tasks**
 
-![Login](https://i.imgur.com/oXPg07m.png)
+### **/ - GET**
 
-## /tasks
+![TasksGet](https://i.imgur.com/a4q83re.png)
 
-### / - GET
+### **/ - POST**
 
-URL: https://hopp.sh/r/d7aoeew5pVm3
+![TasksPost](https://i.imgur.com/o1jXva4.png)
 
-![Login](https://i.imgur.com/a4q83re.png)
+### **/:id - GET**
 
-### / - POST
+![tasksIdGet](https://i.imgur.com/rNyJQmW.png)
 
-URL: https://hopp.sh/r/d7aoeew5pVm3
+### **/:id - PUT**
 
-![Login](https://i.imgur.com/a4q83re.png)
+![tasksIdPut](https://i.imgur.com/5wfzfmw.png)
+
+### **/:id - DELETE**
+
+![tasksIdDelete](https://i.imgur.com/OsjaQC6.png)
+
