@@ -38,7 +38,8 @@ const updateTask = (tasks, id, updatedTask) => {
         title: updatedTask.title,
         description: updatedTask.description,
         due_date: updatedTask.due_date,
-        creation_date: task.creation_date
+        creation_date: task.creation_date,
+        status: updatedTask.status
     };
 
     const updatedTasks = deleteTask(tasks, id);
