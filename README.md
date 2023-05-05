@@ -31,9 +31,9 @@ npm install
 npm start
 ```
 
-## Dokumentation
+## Ausführliche Dokumentation
 
-Sie finden die Dokumentation auf [dieser Seite](https://m295.samihindi.com).
+Sie finden die Dokumentation auf [dieser Seite](https://m295.samihindi.com) oder im [Docs](docs/) folder.
 
 > **Hinweis:** Diese Dokumentation wurde mithilfe von **[Nextra](https://nextra.site)** erstellt.
 
