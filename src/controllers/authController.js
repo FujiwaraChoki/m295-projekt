@@ -80,7 +80,7 @@ const login = async (req, res) => {
         }
 
         if (password !== 'm295') {
-            return res.status(401).json({
+            return res.status(403).json({
                 success: false,
                 message: 'Invalid password'
             });
