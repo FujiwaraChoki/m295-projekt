@@ -1,17 +1,15 @@
-const { generateRandomId } = require('../utils');
-
 const logout = (req, res) => {
     try {
-        const { sessionID } = req.session;
+        const { email } = req.session;
 
-        if (!sessionID) {
+        if (!email) {
             return res.status(401).json({
                 success: false,
                 message: 'Unauthorized'
             });
         }
 
-        req.session.sessionID = null;
+        req.session.email = null;
 
         return res.sendStatus(204);
 
@@ -26,10 +24,10 @@ const logout = (req, res) => {
 
 const verify = (req, res) => {
     try {
-        const sessionID = req.session.sessionID;
-        console.log(sessionID);
+        const email = req.session.email;
+        console.log(email);
 
-        if (!sessionID) {
+        if (!email) {
             return res.status(403).json({
                 success: false,
                 message: 'Unauthorized'
@@ -39,7 +37,7 @@ const verify = (req, res) => {
         return res.status(200).json({
             success: true,
             message: 'Authorized',
-            session_id: sessionID
+            email: email
         });
     } catch (err) {
         console.error(err);
@@ -67,13 +65,11 @@ const login = async (req, res) => {
             });
         }
 
-        const sessionID = generateRandomId();
-
-        req.session.sessionID = sessionID;
+        req.session.email = email;
 
         return res.status(200).json({
             success: true,
-            session_id: sessionID,
+            email: email,
             message: 'Login successful'
         });
     } catch (err) {

@@ -10,7 +10,7 @@ const tasks = require('../../data/tasks.json');
 
 const getAll = (req, res) => {
     try {
-        if (!req.session.sessionID) {
+        if (!req.session.email) {
             return res.status(403).json({
                 success: false,
                 message: 'Unauthorized'
@@ -32,7 +32,7 @@ const getAll = (req, res) => {
 
 const single = (req, res) => {
     try {
-        if (!req.session.sessionID) {
+        if (!req.session.email) {
             return res.status(403).json({
                 success: false,
                 message: 'Unauthorized'
@@ -63,7 +63,7 @@ const single = (req, res) => {
 
 const add = (req, res) => {
     try {
-        if (!req.session.sessionID) {
+        if (!req.session.email) {
             return res.status(403).json({
                 success: false,
                 message: 'Unauthorized'
@@ -111,7 +111,7 @@ const add = (req, res) => {
 
 const remove = (req, res) => {
     try {
-        if (!req.session.sessionID) {
+        if (!req.session.email) {
             return res.status(403).json({
                 success: false,
                 message: 'Unauthorized'
@@ -145,7 +145,7 @@ const remove = (req, res) => {
 
 const update = (req, res) => {
     try {
-        if (!req.session.sessionID) {
+        if (!req.session.email) {
             return res.status(403).json({
                 success: false,
                 message: 'Unauthorized'
