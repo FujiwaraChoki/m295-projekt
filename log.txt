@@ -1,0 +1,131 @@
+commit cddc1598cc459ca488413da7dacea256779ec061
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 15:43:25 2023 +0200
+
+    Add alert at README.md file bottom
+
+commit 17f78b08fcff076fdddf9755313ba97d5110858c
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 15:39:56 2023 +0200
+
+    Added methods to title of each api route doc
+
+commit 88d7d793f2eddd2f5fb498bca294150efcd33346
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 15:33:43 2023 +0200
+
+    Changed names
+
+commit 47c7e8fc2128e6b190288a19d7032b2bfc3ed908
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 15:31:12 2023 +0200
+
+    Added docs for API (redundant with Website docs)
+
+commit f083c4b8d8ed8ee1d4e3cbb277f39e75939bb829
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 15:09:59 2023 +0200
+
+    Added project
+
+commit 9a556813a88a41e7792cb5801600ef2256a602d0
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 15:07:26 2023 +0200
+
+    Added express sessions
+
+commit dd1a65ae2fc71c3ebd2ace5f92541ac390cf2a15
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 14:46:17 2023 +0200
+
+    Added state updating
+
+commit 1f58285b4597988c4d16202a0f68af70c492a92b
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 12:52:11 2023 +0200
+
+    Changed Response code
+
+commit d9f71c341578633a684aac418953e2cfdef4187f
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 10:34:41 2023 +0000
+
+    Added an E-Mail Checker
+
+commit fd9ec68e228fa9c409d0519ff259eb00b43f24b8
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 10:26:58 2023 +0000
+
+    Now using Email instead of sessionID
+
+commit 2385502022cb7c59b691f025ef97e9a81bb6c717
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 10:18:23 2023 +0000
+
+    Removed Tab Rules for EsLint
+
+commit a0e2c3a0227561b3999a99288709ea471d8c8dcc
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 10:01:11 2023 +0000
+
+    Added env variables as optino
+
+commit 3f9c6fe97ce1b870202163fe1f07b8df32b58478
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 09:44:48 2023 +0000
+
+    Added Controllers for auth and tasks
+
+commit 3fc7daf29ed604f2b8db523a6ff05f8762c6c80c
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 09:30:26 2023 +0000
+
+    Added Error Handling with 500 Response Code
+
+commit ce4ce51191da520b32bb1c7815e794112f5dad58
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 09:19:20 2023 +0000
+
+    Added Comments
+
+commit 69905e7de60251a3e3d8245914ae58fa6465d630
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 09:14:39 2023 +0000
+
+    Changed unauthorized code 403
+
+commit 02bb4d5467e1594add67e92f2c693e0f9b0d03c2
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 09:11:08 2023 +0000
+
+    Now Checking for session id on every request.
+
+commit 6e1005bf2111d0d9d27b12563e7f4d94515fa8a5
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 09:05:55 2023 +0000
+
+    Changed Ports
+
+commit 6eb21903d6d2ae9014e44abe8672eeef69533f02
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Fri May 5 07:38:16 2023 +0000
+
+    Added PUT & DELETE route for tasksRoutes
+
+commit 6b382706f8f5d643d50ff0036dd0a1a0a931ed11
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Thu May 4 11:28:44 2023 +0000
+
+    Port wird besser definiert.
+
+commit a79ce691bdf034c401ca8a9f2f2b0d7a53119ec2
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Thu May 4 11:24:12 2023 +0000
+
+    Added nessecary files
+
+commit 881aceeece1a0f5b9a542b180029552b16eaa494
+Author: Sami Hindi <lolipop66611@gmail.com>
+Date:   Thu May 4 11:05:21 2023 +0000
+
+    first commit

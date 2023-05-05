@@ -1,5 +1,3 @@
-const emailCheck = require('email-check');
-
 const logout = (req, res) => {
     try {
         const { email } = req.session;
@@ -50,27 +48,21 @@ const verify = (req, res) => {
     }
 };
 
+const isValidEmail = (email) => {
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return emailRegex.test(email);
+};
+
 const login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        emailCheck(email)
-            .then(function (response) {
-                if (response) {
-                    console.log('Email exists');
-                } else {
-                    return res.status(401).json({
-                        success: false,
-                        message: 'That E-Mail does not exist, please use another one.'
-                    });
-                }
-            })
-            .catch((err) => {
-                return res.status(500).json({
-                    success: false,
-                    message: err
-                });
+        if (!isValidEmail(email)) {
+            return res.status(406).json({
+                success: false,
+                message: 'Please provide a valid email'
             });
+        }
 
         if (!email || !password) {
             return res.status(400).json({

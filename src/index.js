@@ -1,12 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
-const dotenv = require('dotenv');
 
 const { login, verify, logout } = require('./controllers/authController');
-
-// Load the environment variables
-dotenv.config();
 
 /*
 The List of Tasks was generated with the help of ChatGPT:
@@ -35,7 +31,7 @@ app.use(session({
 app.use('/tasks', tasksRoutes);
 
 // Define the port
-const port = (process?.argv[2] ? parseInt(process?.argv[2]) : 5001) || process?.env.PORT;
+const port = process?.argv[2] ? parseInt(process?.argv[2]) : 5001;
 
 // Endpoint for logging in
 app.post('/login', login);
