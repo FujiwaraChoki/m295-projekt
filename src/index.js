@@ -33,75 +33,110 @@ app.use('/tasks', tasksRoutes);
 const port = (process.argv[2] ? parseInt(process.argv[2]) : 5001) || process.env.PORT;
 
 // Endpoint for logging in
-app.post('/login', (req, res) => {
-    const { email, password } = req.body;
+app.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            return res.status(400).json({
+                success: false,
+                message: 'Please provide an email and password'
+            });
+        }
 
-    if (!email || !password) {
-        return res.status(400).json({
+        if (password !== 'm295') {
+            return res.status(401).json({
+                success: false,
+                message: 'Invalid password'
+            });
+        }
+
+        const sessionID = generateRandomId();
+
+        req.session.sessionID = sessionID;
+
+        return res.status(200).json({
+            success: true,
+            session_id: sessionID,
+            message: 'Login successful'
+        });
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
             success: false,
-            message: 'Please provide an email and password'
+            message: 'Internal server error'
         });
     }
-
-    if (password !== 'm295') {
-        return res.status(401).json({
-            success: false,
-            message: 'Invalid password'
-        });
-    }
-
-    const sessionID = generateRandomId();
-
-    req.session.sessionID = sessionID;
-
-    return res.status(200).json({
-        success: true,
-        session_id: sessionID,
-        message: 'Login successful'
-    });
 });
+
 
 // Endpoint for verifying the session
 app.get('/verify', async (req, res) => {
-    const sessionID = await req.session.sessionID;
-    console.log(sessionID);
+    try {
 
-    if (!sessionID) {
-        return res.status(403).json({
+        const sessionID = await req.session.sessionID;
+        console.log(sessionID);
+
+        if (!sessionID) {
+            return res.status(403).json({
+                success: false,
+                message: 'Unauthorized'
+            });
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: 'Authorized',
+            session_id: sessionID
+        });
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
             success: false,
-            message: 'Unauthorized'
+            message: 'Internal server error'
         });
     }
-
-    return res.status(200).json({
-        success: true,
-        message: 'Authorized',
-        session_id: sessionID
-    });
 });
 
 // Endpoint for logging out
 app.delete('/logout', (req, res) => {
-    const { sessionID } = req.session;
+    try {
+        const { sessionID } = req.session;
 
-    if (!sessionID) {
-        return res.status(401).json({
+        if (!sessionID) {
+            return res.status(401).json({
+                success: false,
+                message: 'Unauthorized'
+            });
+        }
+
+        req.session.sessionID = null;
+
+        return res.sendStatus(204);
+
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
             success: false,
-            message: 'Unauthorized'
+            message: 'Internal server error'
         });
     }
-
-    req.session.sessionID = null;
-
-    return res.sendStatus(204);
 });
 
 // Catch all 404 errors
 app.use((req, res, next) => {
-    res.status(404).json({
-        success: false,
-        message: 'Page not found'
-    });
+    try {
+        res.status(404).json({
+            success: false,
+            message: 'Page not found'
+        });
+
+    } catch (err) {
+        console.error(err);
+        return res.status(500).json({
+            success: false,
+            message: 'Internal server error'
+        });
+    }
 });
 
 // Start the server
