@@ -12,4 +12,28 @@ URL: https://hopp.sh/r/OlyaygMnGoPp
 
 ![Login](https://i.imgur.com/DGKSyND.png)
 
-## /
+## /verify
+
+URL: https://hopp.sh/r/d7aoeew5pVm3
+
+![Login](https://i.imgur.com/d2Llc35.png)
+
+## /logout
+
+URL: https://hopp.sh/r/d7aoeew5pVm3
+
+![Login](https://i.imgur.com/oXPg07m.png)
+
+## /tasks
+
+### / - GET
+
+URL: https://hopp.sh/r/d7aoeew5pVm3
+
+![Login](https://i.imgur.com/a4q83re.png)
+
+### / - POST
+
+URL: https://hopp.sh/r/d7aoeew5pVm3
+
+![Login](https://i.imgur.com/a4q83re.png)

@@ -94,11 +94,11 @@ const add = (req, res) => {
             creation_date: new Date().toISOString()
         };
 
-        const updatedTasks = addTask(tasks, newTask);
+        addTask(tasks, newTask);
 
         return res.status(201).json({
             success: true,
-            data: updatedTasks
+            data: newTask
         });
     } catch (err) {
         console.error(err);
