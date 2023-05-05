@@ -1,7 +1,7 @@
 ---
 title: M295 /verify
 ---
-# /verify
+# **GET** - /verify
 
 Der Endpunkt `/verify` wird verwendet, um die Sitzung zu überprüfen, die durch den Endpunkt `/login` festgelegt wurde.
 
@@ -12,10 +12,10 @@ Alle erforderlichen Daten werden aus der übergebenen Sitzung abgerufen.
 
 ## Antworten
 
-| Status | Meaning | Description |
-| ------ | ------- | ----------- |
-| **200** | OK | Der Benutzer ist eingeloggt |
-| **403** | Unauthorized | Der Benutzer ist *nicht* eingeloggt. |
+| Status  | Meaning               | Description                              |
+| ------- | --------------------- | ---------------------------------------- |
+| **200** | OK                    | Der Benutzer ist eingeloggt              |
+| **403** | Unauthorized          | Der Benutzer ist *nicht* eingeloggt.     |
 | **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
 
 ## Beispiel

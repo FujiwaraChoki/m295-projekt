@@ -1,7 +1,7 @@
 ---
 title: M295 /logout
 ---
-# /logout
+# **DELETE** - /logout
 
 Durch die Verwendung der Route `/logout` wird der Benutzer abgemeldet und die laufende Sitzung zerstört.
 
@@ -12,10 +12,10 @@ Alle erforderlichen Daten werden aus der übergebenen Sitzung abgerufen.
 
 ## Antworten
 
-| Status | Meaning | Description |
-| ------ | ------- | ----------- |
-| **204** | No Content | Der Benutzer wurde abgemeldet |
-| **401** | Unauthorized | Der Benutzer ist *nicht* eingeloggt |
+| Status  | Meaning               | Description                              |
+| ------- | --------------------- | ---------------------------------------- |
+| **204** | No Content            | Der Benutzer wurde abgemeldet            |
+| **401** | Unauthorized          | Der Benutzer ist *nicht* eingeloggt      |
 | **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
 
 ## Beispiel

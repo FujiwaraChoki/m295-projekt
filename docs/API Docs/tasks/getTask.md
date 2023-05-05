@@ -1,7 +1,7 @@
 ---
 title: M295 /:id
 ---
-# /:id
+# **GET** - /:id
 
 Dieser Endpunkt gibt eine bestimmte Aufgabe auf der Grundlage der in der URL angegebenen ID zurück.
 
@@ -13,12 +13,12 @@ Dieser Endpunkt gibt eine bestimmte Aufgabe auf der Grundlage der in der URL ang
 
 ## Antworten
 
-| Status | Meaning | Description |
-| ------ | ------- | ----------- |
-| **200** | OK | Die Aufgabe wurde erfolgreich indiziert und zurückgegeben |
-| **403** | Unauthorized | Der Benutzer ist nicht eingeloggt |
-| **404** | Not Found | Die Aufgabe wurde nicht gefunden |
-| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
+| Status  | Meaning               | Description                                               |
+| ------- | --------------------- | --------------------------------------------------------- |
+| **200** | OK                    | Die Aufgabe wurde erfolgreich indiziert und zurückgegeben |
+| **403** | Unauthorized          | Der Benutzer ist nicht eingeloggt                         |
+| **404** | Not Found             | Die Aufgabe wurde nicht gefunden                          |
+| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen                  |
 
 ## Beispiel
 

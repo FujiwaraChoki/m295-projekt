@@ -1,7 +1,7 @@
 ---
 title: M295
 ---
-# /login
+# **POST** - /login
 
 Dieser Endpunkt authentifiziert den Benutzer und gibt schließlich eine Antwort mit der Angabe, ob
 die Anmeldung erfolgreich war oder nicht.
@@ -17,12 +17,12 @@ Falls die Anmeldung ein Erfolg war, wird eine Session mithilfe von `express-sess
 
 ## Responses
 
-| Status | Bedeutung | Beschreibung |
-| ------ | ------- | ----------- |
-| **200** | OK | Die Anmeldung war erfolgreich |
-| **400** | Bad Request | Entweder E-Mail oder Passwort wurde nicht angegeben |
-| **403** | Unauthorized | Die Anmeldeinformationen sind falsch |
-| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
+| Status  | Bedeutung             | Beschreibung                                        |
+| ------- | --------------------- | --------------------------------------------------- |
+| **200** | OK                    | Die Anmeldung war erfolgreich                       |
+| **400** | Bad Request           | Entweder E-Mail oder Passwort wurde nicht angegeben |
+| **403** | Unauthorized          | Die Anmeldeinformationen sind falsch                |
+| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen            |
 
 ## Beispielt
 

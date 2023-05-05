@@ -1,7 +1,7 @@
 ---
 title: M295 /:id
 ---
-# /:id
+# **GET** - /:id
 
 Dieser Endpunkt aktualisiert eine bestimmte Aufgabe auf der Grundlage der in der URL angegebenen ID.
 
@@ -13,13 +13,13 @@ Dieser Endpunkt aktualisiert eine bestimmte Aufgabe auf der Grundlage der in der
 
 ## Antworten
 
-| Status | Bedeutung | Beschreibung |
-| ------ | ------- | ----------- |
-| **200** | OK | Die Aufgabe wurde erfolgreich aktualisiert |
-| **403** | Unauthorized | Der Benutzer ist nicht eingeloggt |
-| **404** | Not Found | Die Aufgabe wurde nicht gefunden |
-| **406** | Not accepted | Entweder wurde die Beschreibung, das Fälligkeitsdatum, das Bundesland oder der Titel nicht angegeben |
-| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
+| Status  | Bedeutung             | Beschreibung                                                                                         |
+| ------- | --------------------- | ---------------------------------------------------------------------------------------------------- |
+| **200** | OK                    | Die Aufgabe wurde erfolgreich aktualisiert                                                           |
+| **403** | Unauthorized          | Der Benutzer ist nicht eingeloggt                                                                    |
+| **404** | Not Found             | Die Aufgabe wurde nicht gefunden                                                                     |
+| **406** | Not accepted          | Entweder wurde die Beschreibung, das Fälligkeitsdatum, das Bundesland oder der Titel nicht angegeben |
+| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen                                                             |
 
 ## Beispiel
 

@@ -1,7 +1,7 @@
 ---
 title: M295 /:id
 ---
-# /:id
+# **DELETE** - /:id
 
 Nach Erhalt der Anfrage wird der Server die Aufgabe mit der angegebenen ID löschen.
 
@@ -13,11 +13,11 @@ Nach Erhalt der Anfrage wird der Server die Aufgabe mit der angegebenen ID lösc
 
 ## Antworten
 
-| Status | Meaning | Description |
-| ------ | ------- | ----------- |
-| **200** | OK | Die Aufgabe wurde erfolgreich gelöscht |
-| **403** | Unauthorized | Der Benutzer ist nicht eingeloggt |
-| **404** | Not Found | Die Aufgabe wurde nicht gefunden |
+| Status  | Meaning               | Description                              |
+| ------- | --------------------- | ---------------------------------------- |
+| **200** | OK                    | Die Aufgabe wurde erfolgreich gelöscht   |
+| **403** | Unauthorized          | Der Benutzer ist nicht eingeloggt        |
+| **404** | Not Found             | Die Aufgabe wurde nicht gefunden         |
 | **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
 
 ## Beispiel

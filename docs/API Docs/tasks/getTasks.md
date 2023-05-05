@@ -1,7 +1,7 @@
 ---
 title: M295 /
 ---
-# /
+# **GET** - /
 
 Wenn der Client eine Anfrage an diesen Endpunkt sendet, gibt der Server ein JSON-Array
 zurück, das alle Aufgaben enthält.
@@ -12,11 +12,11 @@ zurück, das alle Aufgaben enthält.
 
 ## Antworten
 
-| Status | Bedeutung | Beschreibung |
-| ------ | ------- | ----------- |
-| **200** | OK | Die Aufgaben wurden erfolgreich zurückgegeben |
-| **403** | Unauthorized | Der Benutzer ist nicht eingeloggt |
-| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen |
+| Status  | Bedeutung             | Beschreibung                                  |
+| ------- | --------------------- | --------------------------------------------- |
+| **200** | OK                    | Die Aufgaben wurden erfolgreich zurückgegeben |
+| **403** | Unauthorized          | Der Benutzer ist nicht eingeloggt             |
+| **500** | Internal Server Error | Auf dem Server ist etwas schief gelaufen      |
 
 ## Beispiel
 
