@@ -6,12 +6,8 @@ Framework programmiert wurde.
 
 ## Requirements
 
-- ✅ README.md
+- ✅ [Projekt](https://github.com/FujiwaraChoki/m295-233131)
 - ✅ [Dokumentation](https://m295.samihindi.com)
-- ✅ 
-- ✅
-- ⬜️
-- ⬜️
 
 ## Technologie
 
