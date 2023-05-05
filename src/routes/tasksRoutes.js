@@ -16,6 +16,13 @@ const router = express.Router();
 router.use(express.json());
 
 router.get('/', (req, res) => {
+    if (!req.session.sessionID) {
+        return res.status(401).json({
+            success: false,
+            message: 'Unauthorized'
+        });
+    }
+
     return res.status(200).json({
         success: true,
         data: tasks
@@ -23,6 +30,13 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+    if (!req.session.sessionID) {
+        return res.status(401).json({
+            success: false,
+            message: 'Unauthorized'
+        });
+    }
+
     const task = getTaskById(tasks, req.params.id);
 
     if (!task) {
@@ -39,6 +53,13 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
+    if (!req.session.sessionID) {
+        return res.status(401).json({
+            success: false,
+            message: 'Unauthorized'
+        });
+    }
+
     const { title, description, due_date } = req.body;
 
     if (!title || !description || !due_date) {
@@ -65,6 +86,13 @@ router.post('/', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+    if (!req.session.sessionID) {
+        return res.status(401).json({
+            success: false,
+            message: 'Unauthorized'
+        });
+    }
+
     const task = getTaskById(tasks, req.params.id);
 
     if (!task) {
@@ -84,6 +112,13 @@ router.delete('/:id', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
+    if (!req.session.sessionID) {
+        return res.status(401).json({
+            success: false,
+            message: 'Unauthorized'
+        });
+    }
+
     const task = getTaskById(tasks, req.params.id);
 
     if (!task) {

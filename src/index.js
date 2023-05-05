@@ -52,7 +52,6 @@ app.post('/login', (req, res) => {
     const sessionID = generateRandomId();
 
     req.session.sessionID = sessionID;
-    //res.setHeader('Set-Cookie', `sessionID=${sessionID}; HttpOnly; Max-Age=3600;`);
 
     return res.status(200).json({
         success: true,
