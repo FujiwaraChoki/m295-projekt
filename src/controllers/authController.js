@@ -1,3 +1,5 @@
+const emailCheck = require('email-check');
+
 const logout = (req, res) => {
     try {
         const { email } = req.session;
@@ -51,6 +53,25 @@ const verify = (req, res) => {
 const login = async (req, res) => {
     try {
         const { email, password } = req.body;
+
+        emailCheck(email)
+            .then(function (response) {
+                if (response) {
+                    console.log('Email exists');
+                } else {
+                    return res.status(401).json({
+                        success: false,
+                        message: 'That E-Mail does not exist, please use another one.'
+                    });
+                }
+            })
+            .catch((err) => {
+                return res.status(500).json({
+                    success: false,
+                    message: err
+                });
+            });
+
         if (!email || !password) {
             return res.status(400).json({
                 success: false,
