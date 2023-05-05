@@ -1,4 +1,3 @@
-// Tasks Routes
 const express = require('express');
 const {
     addTask,
@@ -15,6 +14,7 @@ const router = express.Router();
 // Middleware
 router.use(express.json());
 
+// Endpoint to get all tasks
 router.get('/', (req, res) => {
     if (!req.session.sessionID) {
         return res.status(403).json({
@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// Endpoint to get a single task
 router.get('/:id', (req, res) => {
     if (!req.session.sessionID) {
         return res.status(403).json({
@@ -52,6 +53,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// Endpoint to add a task
 router.post('/', (req, res) => {
     if (!req.session.sessionID) {
         return res.status(403).json({
@@ -85,6 +87,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// Endpoint to delete a task
 router.delete('/:id', (req, res) => {
     if (!req.session.sessionID) {
         return res.status(403).json({
@@ -111,6 +114,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+// Endpoint to update a task
 router.put('/:id', (req, res) => {
     if (!req.session.sessionID) {
         return res.status(403).json({

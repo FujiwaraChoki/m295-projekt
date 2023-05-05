@@ -9,7 +9,7 @@ https://chat.openai.com/chat
 */
 const tasksRoutes = require('./routes/tasksRoutes');
 
-// Initialisiere die App
+// Initialize the app
 const app = express();
 
 // Middleware
@@ -26,12 +26,13 @@ app.use(session({
     cookie: {}
 }));
 
-// Importierte Routes mit der App verbinden
+// Routes
 app.use('/tasks', tasksRoutes);
 
-// Port definieren
+// Define the port
 const port = (process.argv[2] ? parseInt(process.argv[2]) : 5001) || process.env.PORT;
 
+// Endpoint for logging in
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
 
@@ -60,6 +61,7 @@ app.post('/login', (req, res) => {
     });
 });
 
+// Endpoint for verifying the session
 app.get('/verify', async (req, res) => {
     const sessionID = await req.session.sessionID;
     console.log(sessionID);
@@ -78,7 +80,7 @@ app.get('/verify', async (req, res) => {
     });
 });
 
-
+// Endpoint for logging out
 app.delete('/logout', (req, res) => {
     const { sessionID } = req.session;
 
@@ -94,7 +96,15 @@ app.delete('/logout', (req, res) => {
     return res.sendStatus(204);
 });
 
-// Starte den Server
+// Catch all 404 errors
+app.use((req, res, next) => {
+    res.status(404).json({
+        success: false,
+        message: 'Page not found'
+    });
+});
+
+// Start the server
 app.listen(port, () => {
     console.log(`Der Server läuft auf der folgenden URL: http://localhost:${port}`)
 });
