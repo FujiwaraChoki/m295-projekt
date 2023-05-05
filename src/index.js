@@ -1,5 +1,10 @@
 const express = require('express');
-const userRoutes = require('./routes/userRoutes');
+
+/*
+The List of Tasks was generated with the help of ChatGPT:
+https://chat.openai.com/chat
+*/
+const tasksRoutes = require('./routes/tasksRoutes');
 
 // Initialisiere die App
 const app = express();
@@ -8,7 +13,7 @@ const app = express();
 app.use(express.json());
 
 // Importierte Routes mit der App verbinden
-app.use('/users', userRoutes);
+app.use('/tasks', tasksRoutes);
 
 // Port definieren
 const port = (process.argv[2] ? parseInt(process.argv[2]) : 3000) || process.env.PORT;

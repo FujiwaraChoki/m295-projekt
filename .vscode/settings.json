@@ -1,0 +1,6 @@
+{
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSurroundingLinesStyle": "all",
+    "editor.cursorWidth": 2,
+    "terminal.integrated.cursorBlinking": true
+}
